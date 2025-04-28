@@ -183,7 +183,7 @@ header nav a:hover{
     background-repeat: no-repeat; /* Evita que se repita la imagen */
     display: flex;
     justify-content: center;
-    margin-bottom: 70px;
+   
     align-items: center;
 }
 
@@ -237,13 +237,7 @@ header nav a:hover{
 
 /* contactus */
 /* Formulario de contactanos */
-body{
-    height: 100%; 
-    font-family: 'Noto Sans', sans-serif;
-    background-color: var(--secondary-color) 
-}
-  
-  
+
 .contact_form{  
     width: 460px; 
     height: auto;

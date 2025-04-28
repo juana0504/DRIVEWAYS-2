@@ -37,7 +37,7 @@
             <a href="index.html">HOME</a>
             <a href="about.html">ABOUT US</a>
             <a href="vehicles.html">VEHICLES</a>
-            <a href="#testimonial">RENTALS</a>
+            <a href="rentals.html">RENTALS</a>
             <a href="contact us.html">CONTACT US</a>
         </div>
 
@@ -46,64 +46,66 @@
   </header>
 
   <!-- formulario de contacto en html y css -->  
+  <body-contact>
+    <div class="contact_form">
 
-  <div class="contact_form">
-
-    <div class="formulario">      
-      <h1>Formulario de contacto</h1>
-        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+      <div class="formulario">      
+        <h1>Formulario de contacto</h1>
+          <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+    
+    
+            <form action="submeter-formulario.php" method="post">       
+    
+                
+                    <p>
+                      <label for="nombre" class="colocar_nombre">Nombre
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    </p>
+                  
+                    <p>
+                      <label for="email" class="colocar_email">Email
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    </p>
+                
+                    <p>
+                      <label for="telefone" class="colocar_telefono">Teléfono
+                      </label>
+                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                    </p>    
+                  
+                    <p>
+                      <label for="website" class="colocar_website">Sitio web
+                      </label>
+                        <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
+                    </p>    
+                  
+                    <p>
+                      <label for="asunto" class="colocar_asunto">Asunto
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                    </p>    
+                  
+                    <p>
+                      <label for="mensaje" class="colocar_mensaje">Mensaje
+                        <span class="obligatorio">*</span>
+                      </label>                     
+                                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                    </p>                    
+                  
+                    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+    
+                        
+                
+            </form>
+      </div>  
+    </div>
+  </body-contact>
   
-  
-          <form action="submeter-formulario.php" method="post">       
-  
-              
-                  <p>
-                    <label for="nombre" class="colocar_nombre">Nombre
-                      <span class="obligatorio">*</span>
-                    </label>
-                      <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-                  </p>
-                
-                  <p>
-                    <label for="email" class="colocar_email">Email
-                      <span class="obligatorio">*</span>
-                    </label>
-                      <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                  </p>
-              
-                  <p>
-                    <label for="telefone" class="colocar_telefono">Teléfono
-                    </label>
-                      <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                  </p>    
-                
-                  <p>
-                    <label for="website" class="colocar_website">Sitio web
-                    </label>
-                      <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
-                  </p>    
-                
-                  <p>
-                    <label for="asunto" class="colocar_asunto">Asunto
-                      <span class="obligatorio">*</span>
-                    </label>
-                      <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
-                  </p>    
-                
-                  <p>
-                    <label for="mensaje" class="colocar_mensaje">Mensaje
-                      <span class="obligatorio">*</span>
-                    </label>                     
-                                      <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                                  </p>                    
-                
-                  <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
-  
-                      
-              
-          </form>
-    </div>  
-  </div>
     
 
   <main>
