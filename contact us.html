@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEHICLES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+  <header>
+        <nav>
+            <a href="index.html" id="logo"><img src="img/logo.png" alt="logo website"></a>
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                    <!-- <ul>
+                        <li><a href="#">HOME 1</a></li>
+                        <li><a href="#">HOME 2</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="vehicles.html">VEHICLES</a></li>
+                <li><a href="rentals.html">RENTALS</a></li>
+            </ul>
+            <a href="contact us.html">CONTACT US</a>
+        </nav>
+
+        <nav class="mobile">
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <button onclick="menuMobile()"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+
+        <div id="cont-menu-mobile">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="vehicles.html">VEHICLES</a>
+            <a href="#testimonial">RENTALS</a>
+            <a href="contact us.html">CONTACT US</a>
+        </div>
+
+        
+
+  </header>
+
+  <!-- formulario de contacto en html y css -->  
+
+  <div class="contact_form">
+
+    <div class="formulario">      
+      <h1>Formulario de contacto</h1>
+        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+  
+  
+          <form action="submeter-formulario.php" method="post">       
+  
+              
+                  <p>
+                    <label for="nombre" class="colocar_nombre">Nombre
+                      <span class="obligatorio">*</span>
+                    </label>
+                      <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                  </p>
+                
+                  <p>
+                    <label for="email" class="colocar_email">Email
+                      <span class="obligatorio">*</span>
+                    </label>
+                      <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                  </p>
+              
+                  <p>
+                    <label for="telefone" class="colocar_telefono">Teléfono
+                    </label>
+                      <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                  </p>    
+                
+                  <p>
+                    <label for="website" class="colocar_website">Sitio web
+                    </label>
+                      <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
+                  </p>    
+                
+                  <p>
+                    <label for="asunto" class="colocar_asunto">Asunto
+                      <span class="obligatorio">*</span>
+                    </label>
+                      <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                  </p>    
+                
+                  <p>
+                    <label for="mensaje" class="colocar_mensaje">Mensaje
+                      <span class="obligatorio">*</span>
+                    </label>                     
+                                      <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                  </p>                    
+                
+                  <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+  
+                      
+              
+          </form>
+    </div>  
+  </div>
+    
+
+  <main>
+        <section class="gps-mobile">
+          <h2>Ubicación de nuestra oficina</h2>
+          <div class="mobile-frame">
+            <div id="mini-map"></div>
+          </div>
+          <a href="https://maps.google.com/?q= 5°04′10″N 74°35′53″O﻿ / ﻿5.069444, -74.598056" target="_blank" class="map-button">Ver en Google Maps</a>
+        
+          <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+          <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+          <script>
+            const destinoLat = 4.7110;
+            const destinoLon = -74.0721;
+        
+            const map = L.map('mini-map').setView([destinoLat, destinoLon], 13);
+        
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+        
+            L.marker([destinoLat, destinoLon])
+              .addTo(map)
+              .bindPopup("Nuestra oficina")
+              .openPopup();
+        
+            L.Control.geocoder().addTo(map);
+          </script>
+        </section>
+  </main>
+
+  <footer>
+        <div class="fila">
+            <div class="col-footer">
+                <a href="#"><img src="img/Logo-w.png" alt="logo"></a>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ipsa, earum recusandae dignissimos necessitatibus cupiditate eos accusantium quia quod fuga!</p>
+                <ul> 
+                    <a href="#">FB-</a>
+                    <a href="#">IG-</a>
+                    <a href="#">LI-</a>
+                    <a href="#">YT-</a>
+                    <a href="#">TW-</a>
+                </ul>
+              
+            </div>
+            <div class="col-footer">
+                <h3><i class="fa-solid fa-clock"></i>WORKING HOURS</h3>
+                <p>Mon-FRI:09:00 AM - 09:00 PM</p>
+                <p>Sat:09:00 AM - 07:00 PM</p>
+                <p>Sun:Clased</p>
+            </div>
+            <div class="col-footer">
+                <h3><i class="fa-solid fa-circle-user"></i>QUICK CONTACT</h3>
+                <p>Office:42 Marine Parade, Australia</p>
+                <p>Mail:info@8pxlstudio.com</p>
+                <p>Phone:+0123456789</p>
+            </div>
+        </div>
+            <hr>
+            <div class="fila">
+                <p>Copyright 2025 Driveways. All Rights Reserved</p> <p>Privacy policy  |  Terms of Service</p>
+            </div>
+        </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>

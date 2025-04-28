@@ -1,0 +1,1715 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+    --primary-color: #fe9d2a;
+    --secondary-color: #030921;
+    --thrid-color: #f84445;
+    --bg-white: #fff;
+    --bg-blue: #f3f4f9; 
+    --text-color: #5B6B7A;
+}
+
+body{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+#modal-1{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #00000097;
+    top: -150%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition: 1s;
+}
+
+#modal-1.active{
+    top: 0;
+}
+
+#modal-1 .panel{
+    width: 80%;
+    padding: 50px;
+    background: var(--bg-white);
+    position: relative;
+}
+
+.panel h2{
+    color: var(--secondary-color);
+    font-size: 32px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--tex-color);
+    margin-bottom: 12px;
+}
+
+.panel button{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    font-size: 18px;
+    top: 20px;
+}
+
+
+header{
+    width: 100%;
+    position: relative;
+    background: var(--bg-blue);
+}
+
+
+header nav{
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav.mobile{
+    display: none;
+}
+
+nav.mobile button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eaeaea;
+    border: 1px solid #bababa;
+    color: var(--primary-color);
+}
+
+#cont-menu-mobile{
+    width: 50%;
+    position: fixed;
+    right: -100%;
+    background: #eaeaea;
+    padding: 20px;
+    top: 89px;
+    z-index: 9;
+    height: 90vh;
+    transition: .5s;
+}
+
+#cont-menu-mobile.active{
+    right: 0;
+}
+
+#cont-menu-mobile a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    border-bottom: 1px solid #cecece;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav li{
+    margin: 0 20px;
+    list-style: none;
+    font-size: 30;
+    position: relative;
+    padding: 20px 0;
+}
+
+header nav li ul{
+   display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    background: var(--bg-white);
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0p #00000033;
+    z-index: 1;
+}
+
+nav li:hover ul{
+    display: block;
+}
+
+header li a,
+header nav a{
+    text-decoration: none;
+    color: #bebebe;
+    transition: .4s;
+    font-weight: 400;
+}
+
+header li a:hover,
+header nav a:hover{
+    color: var(--primary-color);
+}
+
+#hero{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* about.html */
+#hero-about{
+    width: 100%;
+    height: 510px;
+    background-image: url("../img/arteum-ro-TVFx7iFAAdQ-unsplash.jpg"); 
+    background-size: cover;       /* Ajusta la imagen para que cubra todo el contenedor */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    align-items: center;
+}
+
+#hero-about h1{
+    color: var(--bg-white);
+    font-size: 50px;
+    
+}
+
+/* cierre del about.html */
+
+/* vehicles.html */
+#hero-vehicles{
+    width: 100%;
+    height: 510px;
+     background-image: url("../img/peter-broomfield-m3m-lnR90uM-unsplash.jpg"); 
+    background-size: cover;       /* Ajusta la imagen para que cubra todo el contenedor */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+#hero-vehicles h1{
+    color: var(--bg-white);
+    font-size: 50px;
+}
+/* cierre vehicles */
+
+/* rentals */
+#hero-rentals{
+    width: 100%;
+    height: 590px;
+    background-image: url("../img/popescu-andrei-alexandru-KQjBXXPRsYM-unsplash.jpg"); 
+    background-size: cover;       /* Ajusta la imagen para que cubra todo el contenedor */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+#hero-rentals h1{
+    color: var(--bg-white);
+    font-size: 50px;
+}
+/* cierre rentals */
+
+/* contactus */
+/* Formulario de contactanos */
+body{
+    height: 100%; 
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--secondary-color) 
+}
+  
+  
+.contact_form{  
+    width: 460px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+}
+  
+  
+input{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: var(--secondary-color); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+  
+  
+textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: var(--secondary-color); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+}
+  
+  
+label{
+    display: block; 
+    float: center;  
+}
+  
+  
+button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: var(--secondary-color); 
+    border-color: var(--secondary-color); 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+}
+  
+  
+button p{
+    color: #fff; 
+}
+  
+  
+span{
+    color: var(--secondary-color); 
+}
+  
+  
+.aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+  }
+  
+  
+h1{
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: var(--secondary-color);
+}
+  
+  
+h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #0e0e0e;   
+}
+  
+  
+p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+}
+  
+  
+::-webkit-input-placeholder {
+   color: #a8a8a8;
+}
+  
+  
+::-webkit-textarea-placeholder {
+   color: #a8a8a8;
+}
+  
+  
+.formulario input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+  
+  
+.formulario textarea:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+/* cierre se contactanos */
+
+/* aca se pone el gps */
+.gps-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+.gps-mobile h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    color: #333;
+}
+  
+.mobile-frame {
+    width: 360px;
+    max-width: 100%;
+    height: 640px;
+    border: 12px solid #111;
+    border-radius: 2rem;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+  
+#mini-map {
+    width: 100%;
+    height: 100%;
+}
+  
+.map-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.map-button:hover {
+    background-color: #0056b3;
+}
+/* desde esta parte seria lo que es el gps  */
+
+/* para el boton del gps */
+.map-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.3s;
+    align-items: center;
+}
+
+.map-button:hover {
+    background-color: #0f70d4;
+}
+/* final del boton */
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+  
+#mini-map {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* aca finaliza el gps */
+
+/* cierre contactus */
+
+#hero .hero-left{
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 80px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.hero-left h3{
+    color: var(--thrid-color);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.hero-left h1{
+    font-size: 88px;
+    font-weight: 800;
+    color: var(--secondary-color);
+}
+
+.hero-left .hero-buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+}
+
+.hero-buttons a{
+    background: var(--primary-color);
+    padding: 18px 70px 18px 30px;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    clip-path: polygon(
+        0 0,
+        calc(100% - 20px) 0,
+        100% 20px, 
+        100% 100%,
+        10px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+.hero-buttons p{
+    font-size: 24px;
+    color: var(--text-color);
+    margin-right: 20px;
+}
+
+.hero-buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+    background: #F5E3CF;
+    cursor: pointer;
+}
+
+.hero-buttons button i{
+    color:var(--primary-color);
+    font-size: 20px;
+}
+
+
+
+.hero-info-left{
+    margin-bottom: 50px;
+}
+
+.hero-info-left h4{
+    color: var(--thrid-color);
+    font-size: 22px;
+    font-weight: 800px;
+}
+
+.hero-info-left p{
+    color: var(--text-color);
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.hero-right{
+    width: 50%;
+    min-height: 80vh;
+    background: url("../img/radiator-grille.png");
+    background-size: left;
+    background-position-y: right;
+    position: relative;
+}
+
+.hero-right .hero-info-right{
+    background: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 330px;
+    padding: 40px;
+    text-align: left;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 22%);
+}
+
+.hero-right .hero-info-right h4{
+    color: var(--bg-white);
+    font-size: 20px;
+}
+.hero-right .hero-info-right b{
+    color: var(--thrid-color);
+    font-size: 20px;
+}
+
+.hero-info-right img{
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+/* desde aca empesamos con lo que es el main o el llamado contador */
+
+main{
+    width: 100%;
+    position: relative;
+}
+
+#counters{
+    background: var(--secondary-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 80px  5%;
+}
+
+#counters h3{
+    font-size: 18px;
+    color: var(--bg-white);
+    margin-bottom: 12px;  
+    font-weight: 300;  
+}
+
+#counters p{
+    color: var(--bg-white);
+    font-size: 70px;
+    font-weight: 700;
+}
+
+
+/* empezamos la segunda section */
+
+#about{
+    width: 100%;
+    padding: 180px 0 180px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bg-white);
+}
+
+#about .about-left{
+    width: 55%;
+    padding-right: 70px;   
+}
+
+.about-left h3{
+    color: var(--thrid-color);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+} 
+
+.about-left h2{
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 800;
+    padding-right: 60px;
+    margin-bottom: 40px;
+}
+
+.about-left p{
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-left .fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-left .fila .col-about{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.col-about span{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    clip-path: polygon(
+        0 0,
+        calc(100% - 20px) 0,
+        100% 20px, 
+        100% 100%,
+        1px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+.col-about span i{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+
+.col-about h4{
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-left: 16px;
+}
+
+.col-about.blue span{
+    background: var(--secondary-color);
+}
+
+ .col-about.blue h4{
+    color: var(--secondary-color);
+}
+
+.about-left hr{
+    background-color: var(--text-color);
+    margin: 40px 0;
+}
+
+.about-left .col-ceo .datos{
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.about-left .datos h3{
+    font-size: 18px;
+    margin: 0;
+    color: var(--secondary-color);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.about-left .datos p{
+    color: var(--thrid-color);
+    font-size: 14px;
+}
+
+.about-right{
+    width: 45%;
+    background: url("../img/young-businessman.png");
+    background-size: cover;
+    position: relative;
+}
+
+.about-right button{
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -34px;
+    top: 100px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.about-right button i{
+    font-size: 22px;
+    color: var(--bg-white);
+}
+
+#carslist{
+    width: 100%;
+    position: relative;
+    background: var(--bg-blue);
+    padding: 100px 5%;
+}
+
+#carslist .fila-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+#carslist .fila-title .carslist-left{
+    width: 60%;
+}
+
+#carslist .fila-title h3{
+    color: var(--thrid-color);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 2px;  
+}
+
+#carslist .fila-title h2{
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 800;
+    padding-right: 60px;
+}
+
+#carslist .fila-title button {
+    background: var(--primary-color);
+    padding: 18px 70px 18px 30px;
+    color: var(--bg-white);
+    font-size: 20px;
+    border: transparent;
+    cursor: pointer;
+    clip-path: polygon(
+        0 0,
+        calc(100% - 20px) 0,
+        100% 20px, 
+        100% 100%,
+        10px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+#carslist .fila{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#carslist .fila .col-car{
+    display: flex;
+    width: 46%;
+    flex-wrap: wrap;
+    background: var(--bg-white);
+    margin-bottom: 50px;
+    position: relative;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 14%);
+}
+
+.col-car .left{
+    width: 45%;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-car .left img{
+    position: absolute;
+    left: -120px;
+    bottom: 12%;
+}
+
+.col-car .right{
+    width: 55%;
+    padding: 30px;
+}
+
+.col-car .right h3{
+    font-size: 50px;
+    color: var(--secondary-color);
+}
+
+.col-car .right h3 span{
+    font-size: 22px;
+    color: var(--tex-color);
+    font-weight: 400;
+}
+
+.col-car .right h2{
+    font-size: 20px;
+    color: #2E3E4E;
+}
+
+.col-car ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+.col-car ul li{
+    width: 50%;
+    list-style: none;
+    margin: 10px 0;
+    color: var(--tex-color);
+    font-size: 14px;
+}
+
+.col-car ul li i{
+    font-size: 22px;
+    margin-right: 12px;
+}
+
+.col-car .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.col-car .buttons p{
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.col-car .buttons button{
+    background: transparent;
+    border: 0 solid transparent;
+    color: #b6b6b6;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.col-car .discounts{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    font-size: 20px;
+    color: var(--bg-white);
+}
+
+.col-car hr{
+    margin: 20px 0;
+}
+
+#cars-rentals{
+    width: 100%;
+    position: relative;
+    padding: 150px 5% 100px;
+    text-align: center;
+    background-color: var(--bg-white);
+}
+
+#cars-rentals h3{
+    color: var(--thrid-color);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#cars-rentals h2{
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 800;
+    padding-right: 60px;
+    margin-bottom: 40px;
+}
+
+#cars-rentals .fila{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 380px;
+    left: 5%;
+}
+
+#cars-rentals .fila .item{
+    width: 35%;
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+#cars-rentals .item span{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    clip-path: polygon(
+        0 0,
+        calc(100% - 20px) 0,
+        100% 20px, 
+        100% 100%,
+        1px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+#cars-rentals span i{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+
+#cars-rentals .info{
+    width: 80%;
+    padding-left: 12px;
+}
+
+#cars-rentals .info h4{
+    font-size: 28px;
+    color: var(--secondary-color);
+    font-weight: 800;
+}
+
+#coars-rentals .info p{
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+#brands{
+    width: 100%;
+    text-align: center;
+    background: var(--secondary-color);
+    padding: 60px 0;
+}
+
+#brands img{
+    margin: 0 20px;
+    filter: grayscale(1);
+}
+
+#testimonial{
+    width: 100%;
+    position: relative;
+    padding: 150px 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--bg-white);
+}
+
+#testimonial .left{
+    width: 50%;
+    padding-right: 80px;
+}
+
+#testimonial .left h3{
+    color: var(--thrid-color);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+#testimonial .left h2{
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 800;
+    padding-right: 60px;
+    margin-bottom: 40px;
+}
+
+#testimonial .left p{
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+#testimonial .left button{
+    background: var(--primary-color);
+    padding: 18px 70px 18px 70px;
+    color: var(--bg-white);
+    font-size: 20px;
+    border-color: transparent;
+    margin-top: 40px;
+    cursor: pointer;
+    clip-path: polygon(
+        0 0,
+        calc(100% - 20px) 0,
+        100% 20px, 
+        100% 100%,
+        10px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+#testimonial .right{
+    width: 50%;
+}
+
+#testimonial .card-testimonial{
+    width: 100%;
+    padding: 25px;
+    background: var(--bg-blue);
+    margin: 30px 0;
+    display: flex;
+}
+
+#testimonial .card-testimonial img{
+    width: 60px;
+    height: 60px;
+}
+
+#testimonial .card-testimonial .info{
+    width: 75%;
+    margin-left: 20px;
+}
+
+#testimonial .info h4{
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+#testimonial .info h5{
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#testimonial .info p{
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+#testimonial .stars{
+    display: flex;
+}
+
+#testimonial .stars i{
+    font-size: 14px;
+    color: var(--primary-color);
+    margin: 0 3px;
+}
+
+#testimonial .stars p{
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+#testimonial .stars p b{
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+#blog{
+    width: 100%;
+    text-align: center;
+    padding: 20px 5% 80px;
+    position: relative;
+    background-color: var(--bg-white);
+}
+
+#blog h3{
+    color: var(--thrid-color);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+#blog h2{
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 800;
+    padding-right: 60px;
+    margin-bottom: 40px;
+}
+
+#blog .fila{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#blog .fila .col-blog{
+    width: 46%;
+    background: var(--bg-blue);
+    position: relative;
+}
+
+#blog .col-blog .info{
+    padding: 24px;
+    text-align: left;
+}
+
+#blog .col-blog img{
+    width: 100%;
+}
+
+#blog .info h4{
+    font-size: 18px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+#blog .info p{
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+#blog .info .fila{
+    border-top: 1px solid #bebebe;
+    padding-top: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#blog .info .fila .autor{
+    display: flex;
+    align-items: center;
+}
+
+#blog .info .fila .autor img{
+    width: 40%;
+}
+
+#blog .autor p{
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+
+#blog .info .fila p{
+    margin-bottom: 0;
+}
+
+#blog .info p i{
+    margin-left: 8px;
+}
+
+#blog .info .fila a{
+    color: #bebebe;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#blog .Category{
+    position: absolute;
+    background: var(--secondary-color);
+    color: var(--bg-white);
+    font-size: 14px;
+    padding: 8px 12px;
+    left: 0;
+    top: 30px;
+}
+
+#blog button{
+    padding: 18px 70px 18px 30px;
+    color: var(--tex-color);
+    font-size: 20px;
+    border-color: transparent;
+    background: #dfdddd;
+    margin: 60px 0;
+    cursor: pointer;
+    clip-path: polygon(
+        0 0,
+        calc(100% - 20px) 0,
+        100% 20px, 
+        100% 100%,
+        10px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+footer{
+    width: 100%;
+    background: var(--secondary-color);
+    padding: 50px 5%;
+}
+
+footer .fila{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+footer .fila .col-footer{
+    width: 30%;
+}
+
+footer .fila .col-footer a img{
+    margin-bottom: 30px;
+}
+
+footer .fila .col-footer h3{
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+footer .fila .col-footer ul{
+    display: flex;
+}
+
+footer .fila .col-footer ul a{
+    color: var(--bg-white);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+footer hr{
+    margin: 20px 0;
+}
+
+footer .fila p{
+    color: var(--bg-white);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* El responsive que vamos a realizar se ara a partir de tamaños de rango de dispositivos */
+
+/* estilos desktop */
+@media screen and (min-width:1921px) and (max-width:4200px){
+    
+}
+
+/* estilos portatil */
+@media screen and (min-width:1025px) and (max-width:1920px){
+
+}
+
+/* estilos tablet */
+
+@media screen and (min-width:820px) and (max-width:1180px){
+
+
+    #hero .hero-left{
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav.mobile{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: var(--bg-blue);
+        z-index: 9;
+    }
+
+    #hero{
+        padding-top: 50px;
+    }
+
+    header nav{
+        display: none;
+    }
+    .hero-left .hero-buttons{
+        justify-content: center;
+    }
+
+    .hero-info-left{
+        text-align: left;
+        margin-top: 40px;
+    }
+
+    .hero-right{
+        width: 100%;
+    }
+
+    #counters{
+        flex-wrap: wrap;
+    }
+
+    #counters .col-counter{
+        width: 50%;
+    }
+
+    #about .about-left{
+        width: 100%;
+    }
+
+    .about-right{
+        height: 55vh;
+        width: 100%;
+        background-size: cover;
+        margin-top: 80px;
+    }
+
+    .about-right button{
+        left: 340px;
+        top: -30px;
+    }
+
+    #carslist .fila-title{
+        display: contents;
+    }
+
+    #carslist .fila-title .carslist-left{
+        width: 100%;
+    }
+
+    #carslist .fila-title button{
+        margin-top: 50px;
+    }
+
+    #carslist .fila{
+        margin-top: 50px;
+    }
+
+    #carslist .fila .col-car{
+        width: 100%;
+    }
+
+    #cars-rentals .fila{
+        position: static;
+    }
+
+    #cars-rentals .fila .item{
+        width: 100%;
+    }
+    #cars-rentals .fila .item.reverse{
+        flex-direction: row-reverse;
+    }
+    #cars-rentals .info{
+        width: 91%;
+    }
+
+    #brands {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    #testimonial .left{
+        width: 100%;
+    }
+
+    #testimonial .left button{
+        margin-top: 70px;
+    }
+
+    #testimonial .right{
+        width: 100%;
+    }
+
+    #blog .fila .col-blog{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    footer .fila{
+        display: contents;
+        margin: 30px 0;
+    }
+
+    footer .fila .col-footer{
+        margin-bottom: 40px;
+    }
+    
+    footer hr{
+        margin-bottom: 40px;
+    }
+    footer .fila{
+        margin-bottom: 40px;
+    }
+
+    footer .fila p{
+        margin-bottom: 40px;
+    }
+
+}  
+
+/* estilos smartphone */
+@media screen and (min-width:320px) and (max-width:767px){
+    
+    header nav.mobile{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: var(--bg-blue);
+        z-index: 9;
+        padding: 20px;
+    }
+
+    #hero{
+        padding-top: 80px;
+    }
+   
+    header nav{
+        display: none;
+    }
+
+    header nav.mobile{
+        display: flex;
+    }
+
+    #modal-1 .panel{
+        width: 100%;
+    }
+
+    
+    #hero .hero-left{
+        width: 100vh;
+        text-align: left;
+        margin-left: 30px;         
+    }
+
+    .hero-left h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .hero-left h3{
+        text-align: center;
+        width: 100%;
+        
+    }
+
+    .hero-info-left h4{
+        font-size: 15px;
+        width: 100%;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .hero-info-left p{
+        font-size: 12px;
+    }
+
+    .hero-left .hero-buttons{
+        justify-content: center;
+    }
+    .hero-buttons a{
+        padding: 10px 70px 11px 30px;
+        font-size: 10px;
+    }
+    
+    .hero .info-left{
+        text-align: start;
+    }
+
+    .hero-right{
+        height: 55vh;
+        width: 100%;
+    }
+    /* counters------------------------------------------ */
+    #counters{
+        flex-wrap: wrap;
+        
+    }
+
+    #counters .col-counter{
+        width: 50%;
+    }
+    #counters h3{
+        font-size:14px;
+
+    }
+
+    #counters p{
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    /* SECCION ABOUT ---------------------------------------------------------*/
+    #about .about-left{
+        width: 100vh;
+    }
+
+    .about-left h2{
+        font-size: 25px;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .about-left .fila{
+        display: flex;
+        align-items: center;  /* Alineación vertical (opcional) */
+        justify-content: space-between; /* Espacio entre elementos (opcional) */
+        flex-wrap: wrap;
+    }
+
+    .about-left p{
+        font-size: 12px;
+    }
+
+    .col-about span{
+       height: 40px;
+    }
+    
+    .col-about h4{
+        font-size: 14px;
+    }
+
+    .about-left .fila{
+       width: 100%;
+    }
+
+
+    .about-left .col-ceo .datos {
+        font-size: 10px;
+
+
+    }
+
+    
+    #about .about-right{
+       width: 100%;
+       height: 31vh;
+       margin-right: 20px;
+       margin-top: 50px;
+    }
+
+    .about-right button{
+        top: -20px;
+        left: 150px;
+        width: 50px;
+        height: 50px;
+
+    }
+
+    /* seccion car list --------------------------------------------------------*/
+    #carslist .fila-title{
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        
+    }
+    #carslist .fila-title h3{
+        font-size: 20px;
+    }
+    #carslist .fila-title h2{
+        font-size: 25px;
+    }
+   
+    #carslist .fila .col-car{
+        width: 100%;
+        margin-top: 50px;
+
+    }
+
+    #carslist .fila-title .carslist-left{
+        width: 100%;
+        
+    }
+
+    .col-car .left {
+        display: none;
+    }
+ 
+    .col-car .right{
+    width: 100%;
+    }
+   
+
+    #carslist .fila-title button{
+        margin-top: 50px;
+        
+    }
+
+    /* SECCION CAR RENTALS ----------------------------------------------------------*/
+    #cars-rentals .fila{
+        position: relative;
+        top: 0;
+    }
+
+    #cars-rentals h2{
+        font-size: 30px;
+        padding-right: 0;
+    }
+    #car-rentals .fila .item{
+        width: 100%; 
+        flex-wrap: nowrap;
+    }
+
+
+    #car-rentals .item span {
+        height: 40%;
+    }
+    
+    #car-rentals .info h4{
+        font-size: 15px;
+    }
+
+    #car-rentals .info p{
+        font-size: 14px;
+    }
+
+    #cars-rentals .fila .item.reverse{
+        flex-direction: row-reverse;
+    }
+    #cars-rentals .info{
+        width: 82%;
+    }
+
+    #cars-rentals .fila .item{
+        width: 92%;
+    }
+
+    .cont-vehiculo img{
+        width: 100%;
+    }
+
+    /* seccion brands --------------------------------------------------------------- */
+    #brands{
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    /* SECCION TESTIMONIALS ----------------------------------------------------------*/
+    #testimonial .right{
+        width: 100%;
+    }
+
+    #testimonial .left{
+        width: 100%;
+    }
+    #testimonial .left h2{
+      font-size:  25px;
+      
+    }
+
+    /* SECCION BLOG -------------------------------------------------------------------*/
+    #blog h2{
+        font-size: 25px;
+    }
+    
+    #blog .info h4{
+        font-size: 14px;
+    }
+    #blog .fila .col-blog{
+        width: 100%;
+        margin-bottom: 55px;
+    }
+    
+
+
+    /* seccion footer-------------------------------------------------------------- */
+ 
+    footer .fila {
+        display: flex;
+        flex-direction:column;
+      }
+
+    footer .fila .col-footer{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    footer hr{
+        margin-bottom: 35px;
+    }
+
+}
